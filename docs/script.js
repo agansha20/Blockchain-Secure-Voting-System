@@ -84,7 +84,7 @@ async function loginUser() {
         // Send login request to Spring Boot
         const response =
             await fetch(
-                "http://localhost:8080/api/voter/login",
+               "https://blockchain-secure-voting-system-1.onrender.com/api/voter/login",
                 {
                     method: "POST",
 

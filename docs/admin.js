@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:8080/api/admin";
+const API_BASE = "https://blockchain-secure-voting-system-1.onrender.com/api/admin";
 
 
 // =====================================================

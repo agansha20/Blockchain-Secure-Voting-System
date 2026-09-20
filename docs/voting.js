@@ -49,7 +49,7 @@ async function loadCandidates() {
 
         const response =
             await fetch(
-                "http://localhost:8080/api/candidates"
+                "https://blockchain-secure-voting-system-1.onrender.com/api/candidates"
             );
 
 
@@ -258,7 +258,7 @@ async function castVote() {
 
         const response =
             await fetch(
-                "http://localhost:8080/api/voter/vote",
+                "https://blockchain-secure-voting-system-1.onrender.com/api/voter/vote",
                 {
                     method: "POST",
 

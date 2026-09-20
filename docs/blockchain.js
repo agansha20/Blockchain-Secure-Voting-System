@@ -1,6 +1,6 @@
 
 const API_URL =
-    "http://localhost:8080/api/voter";
+    "https://blockchain-secure-voting-system-1.onrender.com/api/voter";
 
 
 async function loadBlockchain() {
