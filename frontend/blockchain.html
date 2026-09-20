@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Blockchain | Secure Voting</title>
+
+    <link
+        rel="stylesheet"
+        href="blockchain.css"
+    >
+</head>
+
+<body>
+
+    <!-- BACKGROUND -->
+    <div class="background">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+    </div>
+
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            <span class="logo-icon">🔐</span>
+            <span>Secure Voting</span>
+        </div>
+
+        <div class="header-links">
+
+            <a
+                href="admin.html"
+                class="nav-link"
+            >
+                Dashboard
+            </a>
+
+            <a
+                href="index.html"
+                class="nav-link"
+            >
+                🏠 Home
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="container">
+
+        <!-- PAGE TITLE -->
+        <section class="page-heading">
+
+            <div>
+
+                <p class="small-title">
+                    BLOCKCHAIN SECURITY
+                </p>
+
+                <h1>
+                    Blockchain Ledger
+                </h1>
+
+                <p class="subtitle">
+                    Transparent and tamper-evident voting records
+                </p>
+
+            </div>
+
+            <div
+                id="validityBadge"
+                class="validity-badge checking"
+            >
+                <span class="status-dot"></span>
+                Checking...
+            </div>
+
+        </section>
+
+
+        <!-- INFO CARDS -->
+        <section class="info-grid">
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    ⛓️
+                </div>
+
+                <div>
+                    <p>Total Blocks</p>
+
+                    <h2 id="blockCount">
+                        0
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon green-icon">
+                    🛡️
+                </div>
+
+                <div>
+                    <p>Chain Status</p>
+
+                    <h2 id="chainStatus">
+                        Checking
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon purple-icon">
+                    🔒
+                </div>
+
+                <div>
+                    <p>Security</p>
+
+                    <h2>
+                        SHA-256
+                    </h2>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BLOCKCHAIN EXPLANATION -->
+        <section class="intro-card">
+
+            <div class="intro-icon">
+                💡
+            </div>
+
+            <div>
+
+                <h2>
+                    How the Voting Blockchain Works
+                </h2>
+
+                <p>
+                    Each vote is stored inside a block.
+                    Every block contains the hash of the
+                    previous block, creating a connected
+                    chain. If a stored record is modified,
+                    the blockchain integrity check can
+                    detect the change.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- BLOCKCHAIN -->
+        <section class="blockchain-section">
+
+            <div class="section-title">
+
+                <div>
+                    <p class="small-title">
+                        LEDGER
+                    </p>
+
+                    <h2>
+                        Voting Blocks
+                    </h2>
+                </div>
+
+                <button
+                    class="refresh-btn"
+                    onclick="loadBlockchain()"
+                >
+                    ↻ Refresh
+                </button>
+
+            </div>
+
+
+            <div
+                id="blockchainContainer"
+                class="blockchain-container"
+            >
+
+                <div class="loading">
+                    <div class="spinner"></div>
+
+                    Loading blockchain...
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p>
+            🔐 Secure Voting System
+            <span>•</span>
+            Blockchain Protected
+        </p>
+
+    </footer>
+
+
+    <script src="blockchain.js"></script>
+
+</body>
+
+</html>

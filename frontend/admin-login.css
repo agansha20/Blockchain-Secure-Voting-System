@@ -1,0 +1,800 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    min-height: 100vh;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #172554 0%,
+            #0f172a 35%,
+            #020617 100%
+        );
+
+    overflow-x: hidden;
+
+    position: relative;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.background {
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+.glow {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+
+    opacity: 0.35;
+}
+
+
+.glow-1 {
+    width: 350px;
+    height: 350px;
+
+    background: #2563eb;
+
+    top: -120px;
+    left: -100px;
+}
+
+
+.glow-2 {
+    width: 300px;
+    height: 300px;
+
+    background: #06b6d4;
+
+    right: -100px;
+    top: 30%;
+
+    opacity: 0.25;
+}
+
+
+.glow-3 {
+    width: 280px;
+    height: 280px;
+
+    background: #4f46e5;
+
+    bottom: -100px;
+    left: 35%;
+
+    opacity: 0.25;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: relative;
+
+    z-index: 5;
+
+    height: 72px;
+
+    padding: 0 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        rgba(2, 6, 23, 0.75);
+
+    border-bottom:
+        1px solid rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+
+    backdrop-filter: blur(15px);
+}
+
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+}
+
+
+.logo-icon {
+    font-size: 23px;
+}
+
+
+.home-button {
+    text-decoration: none;
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    border:
+        1px solid rgba(
+            255,
+            255,
+            255,
+            0.15
+        );
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.06
+        );
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.home-button:hover {
+    background: #2563eb;
+
+    border-color: #2563eb;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(37, 99, 235, 0.3);
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main-container {
+    position: relative;
+
+    z-index: 2;
+
+    min-height:
+        calc(100vh - 120px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 45px 20px;
+}
+
+
+/* =========================
+   LOGIN CARD
+========================= */
+
+.login-card {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 455px;
+
+    padding: 42px 42px 35px;
+
+    text-align: center;
+
+    border-radius: 22px;
+
+    background:
+        rgba(
+            15,
+            23,
+            42,
+            0.78
+        );
+
+    border:
+        1px solid rgba(
+            255,
+            255,
+            255,
+            0.12
+        );
+
+    box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, 0.45);
+
+    backdrop-filter: blur(22px);
+
+    animation:
+        cardAppear 0.7s ease;
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* TOP BLUE LINE */
+
+.top-line {
+    position: absolute;
+
+    top: 0;
+
+    left: 12%;
+
+    width: 76%;
+
+    height: 3px;
+
+    border-radius: 0 0 10px 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #06b6d4,
+            #6366f1
+        );
+
+    box-shadow:
+        0 0 18px
+        rgba(37, 99, 235, 0.7);
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.admin-icon {
+    width: 78px;
+
+    height: 78px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 22px;
+
+    font-size: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(37, 99, 235, 0.25),
+            rgba(6, 182, 212, 0.15)
+        );
+
+    border:
+        1px solid
+        rgba(
+            96,
+            165,
+            250,
+            0.3
+        );
+
+    box-shadow:
+        0 0 30px
+        rgba(37, 99, 235, 0.18);
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.login-card h1 {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+
+    color: white;
+
+    letter-spacing: -0.5px;
+}
+
+
+.subtitle {
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   SECURITY BADGE
+========================= */
+
+.security-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 8px 13px;
+
+    margin-bottom: 27px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(
+            37,
+            99,
+            235,
+            0.10
+        );
+
+    border:
+        1px solid
+        rgba(
+            59,
+            130,
+            246,
+            0.20
+        );
+
+    color: #93c5fd;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.input-group {
+    text-align: left;
+
+    margin-bottom: 19px;
+}
+
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.input-wrapper {
+    position: relative;
+}
+
+
+.input-icon {
+    position: absolute;
+
+    left: 14px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    font-size: 16px;
+
+    opacity: 0.7;
+
+    pointer-events: none;
+}
+
+
+.input-wrapper input {
+    width: 100%;
+
+    height: 50px;
+
+    padding:
+        0 15px 0 44px;
+
+    border-radius: 10px;
+
+    border:
+        1px solid
+        rgba(
+            148,
+            163,
+            184,
+            0.20
+        );
+
+    outline: none;
+
+    background:
+        rgba(
+            2,
+            6,
+            23,
+            0.55
+        );
+
+    color: white;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.input-wrapper input::placeholder {
+    color: #64748b;
+}
+
+
+.input-wrapper input:focus {
+    border-color: #3b82f6;
+
+    background:
+        rgba(
+            2,
+            6,
+            23,
+            0.75
+        );
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            59,
+            130,
+            246,
+            0.12
+        );
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-button {
+    width: 100%;
+
+    height: 51px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #1d4ed8
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(37, 99, 235, 0.25);
+
+    transition: 0.3s;
+}
+
+
+.login-button .arrow {
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+
+.login-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 30px
+        rgba(37, 99, 235, 0.38);
+
+    background:
+        linear-gradient(
+            135deg,
+            #3b82f6,
+            #2563eb
+        );
+}
+
+
+.login-button:hover .arrow {
+    transform:
+        translateX(4px);
+}
+
+
+.login-button:active {
+    transform:
+        translateY(0);
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.error-message {
+    min-height: 20px;
+
+    margin-top: 13px;
+
+    color: #f87171;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin:
+        22px 0 18px;
+}
+
+
+.divider span {
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+}
+
+
+.divider p {
+    color: #64748b;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   BACK LINK
+========================= */
+
+.back-link {
+    color: #60a5fa;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.back-link:hover {
+    color: #93c5fd;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 15px;
+
+    color: #475569;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .home-button {
+        padding: 8px 12px;
+
+        font-size: 12px;
+    }
+
+    .main-container {
+        padding: 30px 15px;
+    }
+
+    .login-card {
+        padding:
+            35px 24px 28px;
+
+        border-radius: 18px;
+    }
+
+    .login-card h1 {
+        font-size: 26px;
+    }
+
+    .admin-icon {
+        width: 68px;
+
+        height: 68px;
+
+        font-size: 30px;
+    }
+}
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.logo-icon {
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    font-size: 21px;
+    font-weight: bold;
+
+    box-shadow: 0 0 25px rgba(37,99,235,0.4);
+}
+
+
+.logo h2 {
+
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+
+.logo span {
+
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: #8ea2c9;
+}

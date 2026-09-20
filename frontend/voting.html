@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>BlockVote | Cast Your Vote</title>
+
+    <link rel="stylesheet"
+          href="voting.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">✓</div>
+
+            <div>
+                <h2>BlockVote</h2>
+                <span>SECURE VOTING</span>
+            </div>
+
+        </div>
+
+        <div class="voter-info">
+
+            <span id="welcomeText">
+                Welcome, Voter
+            </span>
+
+            <button onclick="logout()">
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="voting-container">
+
+        <div class="page-title">
+
+            <div class="small-title">
+                <span></span>
+                SECURE ELECTION
+            </div>
+
+            <h1>
+                Cast Your <span>Vote</span>
+            </h1>
+
+            <p>
+                Select one candidate and confirm your vote.
+                Your vote will be securely recorded.
+            </p>
+
+        </div>
+
+
+        <!-- SECURITY MESSAGE -->
+
+        <div class="security-box">
+
+            <div class="security-icon">
+                🔐
+            </div>
+
+            <div>
+
+                <strong>
+                    Your vote is protected
+                </strong>
+
+                <p>
+                    Every vote is securely stored and
+                    verified using blockchain technology.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CANDIDATES -->
+
+        <section class="candidate-section">
+
+            <h2>
+                Choose Your Candidate
+            </h2>
+
+            <div
+                id="candidateList"
+                class="candidate-grid">
+
+                <div class="loading">
+                    Loading candidates...
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- VOTE BUTTON -->
+
+        <div class="vote-action">
+
+            <button
+                id="voteButton"
+                class="vote-btn"
+                onclick="confirmVote()"
+                disabled>
+
+                Select a Candidate First →
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- CONFIRMATION MODAL -->
+
+    <div
+        id="confirmModal"
+        class="modal">
+
+        <div class="confirm-box">
+
+            <button
+                class="close-btn"
+                onclick="closeConfirm()">
+
+                ×
+
+            </button>
+
+            <div class="confirm-icon">
+                🗳️
+            </div>
+
+            <h2>
+                Confirm Your Vote
+            </h2>
+
+            <p>
+                You are voting for:
+            </p>
+
+            <h3 id="selectedCandidate">
+                Candidate
+            </h3>
+
+            <p class="warning">
+                ⚠️ Once submitted, your vote cannot be changed.
+            </p>
+
+            <div class="confirm-buttons">
+
+                <button
+                    class="cancel-btn"
+                    onclick="closeConfirm()">
+
+                    Cancel
+
+                </button>
+
+                <button
+                    class="confirm-btn"
+                    onclick="castVote()">
+
+                    Confirm Vote ✓
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="voting.js"></script>
+
+</body>
+
+</html>

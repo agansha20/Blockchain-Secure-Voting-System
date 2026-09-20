@@ -1,0 +1,40 @@
+# Java / Maven
+backend/target/
+target/
+*.class
+*.jar
+
+# Maven / IDE
+.mvn/wrapper/maven-wrapper.jar
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+
+# Environment and secrets
+.env
+*.env
+application-local.properties
+
+# Compiled / generated files
+out/
+
+# OS files
+.DS_Store
+Thumbs.db
+/src/

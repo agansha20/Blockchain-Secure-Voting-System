@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - BlockVote</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         LOGIN PROTECTION
+    ========================== -->
+
+    <script>
+        if (sessionStorage.getItem("adminLoggedIn") !== "true") {
+            window.location.href = "admin-login.html";
+        }
+    </script>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="header">
+
+        <!-- LOGO -->
+        <div class="logo">
+
+            <div class="logo-icon">
+                ✓
+            </div>
+
+            <div>
+                <h2>BlockVote</h2>
+                <span>SECURE VOTING</span>
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="admin.html" class="active">
+                Dashboard
+            </a>
+
+            <a href="blockchain.html">
+                Blockchain
+            </a>
+
+        </nav>
+
+
+        <!-- ADMIN -->
+        <div class="admin-area">
+
+            <span class="admin-name">
+                Administrator
+            </span>
+
+            <button
+                class="logout-btn"
+                onclick="adminLogout()">
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN DASHBOARD
+    ========================== -->
+
+    <main class="dashboard">
+
+
+        <!-- PAGE HEADING -->
+
+        <div class="page-heading">
+
+            <div>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+                <p>
+                    Manage candidates, voters and monitor the election.
+                </p>
+
+            </div>
+
+
+            <div class="system-active">
+
+                <span class="status-dot"></span>
+
+                System Active
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             STATISTICS
+        ========================== -->
+
+        <section class="stats-grid">
+
+
+            <!-- TOTAL CANDIDATES -->
+
+            <div class="stat-card">
+
+                <span>
+                    Total Candidates
+                </span>
+
+                <h2 id="totalCandidates">
+                    0
+                </h2>
+
+            </div>
+
+
+            <!-- TOTAL VOTES -->
+
+            <div class="stat-card">
+
+                <span>
+                    Total Votes
+                </span>
+
+                <h2 id="totalVotes">
+                    0
+                </h2>
+
+            </div>
+
+
+            <!-- BLOCKCHAIN BLOCKS -->
+
+            <div class="stat-card">
+
+                <span>
+                    Blockchain Blocks
+                </span>
+
+                <h2 id="totalBlocks">
+                    0
+                </h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BLOCKCHAIN STATUS
+        ========================== -->
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Blockchain Status
+                    </h2>
+
+                    <p>
+                        Current security status of the voting ledger
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="blockchainStatus"
+                    class="blockchain-status">
+
+                    <span class="status-dot active"></span>
+
+                    Blockchain Secure
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CANDIDATE MANAGEMENT
+        ========================== -->
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Candidate Management
+                    </h2>
+
+                    <p>
+                        Add or remove election candidates
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADD CANDIDATE FORM -->
+
+            <form
+                id="candidateForm"
+                class="management-form candidate-form">
+
+                <input
+                    type="text"
+                    id="candidateName"
+                    placeholder="Enter candidate name"
+                    autocomplete="off"
+                    required>
+
+
+                <button
+                    type="submit"
+                    class="add-btn">
+
+                    + Add Candidate
+
+                </button>
+
+            </form>
+
+
+            <!-- CANDIDATE LIST -->
+
+            <div
+                id="candidateList"
+                class="management-list">
+
+                Loading candidates...
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             VOTER MANAGEMENT
+        ========================== -->
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Voter Management
+                    </h2>
+
+                    <p>
+                        Add, view and remove registered voters
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADD VOTER FORM -->
+
+            <form
+                id="voterForm"
+                class="management-form voter-form">
+
+
+                <input
+                    type="text"
+                    id="newVoterId"
+                    placeholder="Voter ID"
+                    autocomplete="off"
+                    required>
+
+
+                <input
+                    type="text"
+                    id="newVoterName"
+                    placeholder="Voter name"
+                    autocomplete="off"
+                    required>
+
+
+                <input
+                    type="password"
+                    id="newVoterPassword"
+                    placeholder="Password"
+                    required>
+
+
+                <button
+                    type="submit"
+                    class="add-btn">
+
+                    + Add Voter
+
+                </button>
+
+            </form>
+
+
+            <!-- VOTER LIST -->
+
+            <div
+                id="voterList"
+                class="management-list">
+
+                Loading voters...
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ELECTION RESULTS
+        ========================== -->
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Election Results
+                    </h2>
+
+                    <p>
+                        Current vote count for each candidate
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="resultsContainer"
+                class="results-container">
+
+                Loading results...
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BLOCKCHAIN LEDGER
+        ========================== -->
+
+        <section class="panel blockchain-panel">
+
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Blockchain Ledger
+                    </h2>
+
+                    <p>
+                        View and verify all recorded voting blocks
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="blockchain-content">
+
+
+                <!-- BLOCKCHAIN INFORMATION -->
+
+                <div class="blockchain-info">
+
+
+                    <div class="blockchain-icon">
+                        🔗
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Secure Voting Ledger
+                        </h3>
+
+                        <p>
+                            Every vote is securely recorded as a block
+                            using SHA-256 hashing technology.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- VIEW BUTTON -->
+
+                <button
+                    type="button"
+                    class="view-blockchain-btn"
+                    onclick="viewBlockchain()">
+
+                    View Blockchain
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        © 2026 BlockVote — Secure Blockchain Voting System
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

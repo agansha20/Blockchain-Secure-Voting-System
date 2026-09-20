@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Login | Secure Voting</title>
+
+    <link
+        rel="stylesheet"
+        href="admin-login.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         ANIMATED BACKGROUND
+    ========================== -->
+
+    <div class="background">
+
+        <div class="glow glow-1"></div>
+
+        <div class="glow glow-2"></div>
+
+        <div class="glow glow-3"></div>
+
+    </div>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <h2>
+                    BlockVote
+                </h2>
+
+                <span>
+                    SECURE VOTING
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- HOME BUTTON -->
+
+        <a
+            href="index.html"
+            class="home-button"
+        >
+            🏠 Home
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="main-container">
+
+        <div class="login-card">
+
+            <div class="top-line"></div>
+
+
+            <!-- ADMIN ICON -->
+
+            <div class="admin-icon">
+                🔐
+            </div>
+
+
+            <!-- TITLE -->
+
+            <h1>
+                Admin Login
+            </h1>
+
+            <p class="subtitle">
+                Secure Voting Administration
+            </p>
+
+
+            <!-- SECURITY BADGE -->
+
+            <div class="security-badge">
+
+                🛡️
+
+                <span>
+                    Authorized Access Only
+                </span>
+
+            </div>
+
+
+            <!-- =========================
+                 LOGIN FORM
+            ========================== -->
+
+            <form id="adminLoginForm">
+
+
+                <!-- USERNAME -->
+
+                <div class="input-group">
+
+                    <label for="adminUsername">
+                        Username
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            👤
+                        </span>
+
+                        <input
+                            type="text"
+                            id="adminUsername"
+                            placeholder="Enter admin username"
+                            autocomplete="username"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="input-group">
+
+                    <label for="adminPassword">
+                        Password
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            🔑
+                        </span>
+
+                        <input
+                            type="password"
+                            id="adminPassword"
+                            placeholder="Enter admin password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button
+                    type="submit"
+                    class="login-button"
+                >
+
+                    <span>
+                        Login to Dashboard
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+            </form>
+
+
+            <!-- ERROR MESSAGE -->
+
+            <p
+                id="errorMessage"
+                class="error-message"
+            ></p>
+
+
+            <!-- DIVIDER -->
+
+            <div class="divider">
+
+                <span></span>
+
+                <p>
+                    Secure Voting System
+                </p>
+
+                <span></span>
+
+            </div>
+
+
+            <!-- BACK TO HOME -->
+
+            <a
+                href="index.html"
+                class="back-link"
+            >
+                ← Back to Home
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Secure Voting System
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="admin-login.js"></script>
+
+</body>
+
+</html>

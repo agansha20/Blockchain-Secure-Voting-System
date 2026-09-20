@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BlockVote | Secure Digital Voting</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <div class="logo-icon">✓</div>
+
+            <div>
+                <h2>BlockVote</h2>
+                <span>SECURE VOTING</span>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+
+            <!-- ADMIN LOGIN -->
+            <a href="admin-login.html">Admin Login</a>
+        </nav>
+
+        <button class="nav-login" onclick="openLogin('voter')">
+            Login →
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                <span></span>
+                SECURE • TRANSPARENT • DECENTRALIZED
+            </div>
+
+            <h1>
+                Your Vote.
+                <br>
+                <span>Protected by Blockchain.</span>
+            </h1>
+
+            <p>
+                Experience a modern and secure digital voting system
+                where every vote is protected, verified and stored
+                using blockchain technology.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn"
+                        onclick="openLogin('voter')">
+                    Start Voting
+                    <span>→</span>
+                </button>
+
+                <button class="secondary-btn"
+                        onclick="scrollToFeatures()">
+                    Explore Features
+                </button>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <strong>100%</strong>
+                    <span>Secure</span>
+                </div>
+
+                <div>
+                    <strong>SHA-256</strong>
+                    <span>Encryption</span>
+                </div>
+
+                <div>
+                    <strong>1 Vote</strong>
+                    <span>Per Voter</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BLOCKCHAIN VISUAL -->
+
+        <div class="blockchain-visual">
+
+            <div class="glow"></div>
+
+            <div class="cube">
+
+                <div class="shield">
+                    🔐
+                </div>
+
+                <div class="cube-text">
+                    <strong>BLOCK</strong>
+                    <span>VERIFIED</span>
+                </div>
+
+            </div>
+
+            <div class="chain-node node1">✓</div>
+            <div class="chain-node node2">🔒</div>
+            <div class="chain-node node3">✓</div>
+            <div class="chain-node node4">🔐</div>
+
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+            <div class="line line4"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features" id="features">
+
+        <div class="section-heading">
+
+            <div class="small-title">
+                <span></span>
+                WHY BLOCKVOTE
+            </div>
+
+            <h2>
+                Built for <span>Trust & Security</span>
+            </h2>
+
+            <p>
+                Every part of the voting process is designed
+                to provide transparency and security.
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🛡️</div>
+
+                <h3>Secure Voting</h3>
+
+                <p>
+                    Votes are securely recorded and protected
+                    from unauthorized modifications.
+                </p>
+
+                <a href="#about">Learn more →</a>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🔗</div>
+
+                <h3>Blockchain Powered</h3>
+
+                <p>
+                    Each vote is connected through cryptographic
+                    hashes creating a tamper-resistant chain.
+                </p>
+
+                <a href="#about">Learn more →</a>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">👁️</div>
+
+                <h3>Transparent</h3>
+
+                <p>
+                    Election results can be verified while
+                    maintaining the integrity of recorded votes.
+                </p>
+
+                <a href="#about">Learn more →</a>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">⚡</div>
+
+                <h3>Fast & Simple</h3>
+
+                <p>
+                    A simple interface allows voters to cast
+                    their vote quickly and easily.
+                </p>
+
+                <a href="#about">Learn more →</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section class="how-it-works" id="about">
+
+        <div class="section-heading">
+
+            <div class="small-title">
+                <span></span>
+                HOW IT WORKS
+            </div>
+
+            <h2>
+                Your Vote in <span>4 Simple Steps</span>
+            </h2>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">01</div>
+
+                <h3>Login</h3>
+
+                <p>
+                    Verify your voter ID and password.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">02</div>
+
+                <h3>Select</h3>
+
+                <p>
+                    Choose your preferred candidate.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">03</div>
+
+                <h3>Submit</h3>
+
+                <p>
+                    Confirm and securely cast your vote.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">04</div>
+
+                <h3>Verify</h3>
+
+                <p>
+                    Your vote becomes part of the blockchain.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+        <div>
+
+            <h2>
+                Ready to Cast Your Vote?
+            </h2>
+
+            <p>
+                Join a secure and transparent digital voting experience.
+            </p>
+
+        </div>
+
+        <button class="primary-btn"
+                onclick="openLogin('voter')">
+
+            Start Voting →
+
+        </button>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            <div class="logo-icon">✓</div>
+
+            <div>
+                <strong>BlockVote</strong>
+                <small>Blockchain Secure Voting</small>
+            </div>
+        </div>
+
+        <p>
+            © 2026 BlockVote. Secure • Transparent • Trusted
+        </p>
+
+    </footer>
+
+
+    <!-- ================= LOGIN MODAL ================= -->
+
+    <div class="modal" id="loginModal">
+
+        <div class="login-box">
+
+            <button class="close-btn"
+                    onclick="closeLogin()">
+                ×
+            </button>
+
+            <div class="login-icon">
+                🔐
+            </div>
+
+            <h2 id="loginTitle">
+                Voter Login
+            </h2>
+
+            <p>
+                Enter your credentials to continue
+            </p>
+
+
+            <label>Voter ID</label>
+
+            <input
+                type="text"
+                id="voterId"
+                placeholder="Enter your voter ID"
+            >
+
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+            >
+
+
+            <button class="login-btn"
+                    onclick="loginUser()">
+
+                Login →
+
+            </button>
+
+            <div class="login-security">
+                🔒 Your credentials are securely protected
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
